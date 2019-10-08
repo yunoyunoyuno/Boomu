@@ -1,0 +1,32 @@
+[
+  {
+    "name": "PAT1 Test",
+    "level": "difficult",
+    "price": 800,
+    "examinerAmount": 1000
+  },
+  {
+    "name": "PAT2 Test",
+    "level": "difficult",
+    "price": 700,
+    "examinerAmount": 800
+  },
+  {
+    "name": "School exam test",
+    "level": "normal",
+    "price": 0,
+    "examinerAmount": 30
+  },
+  {
+    "name": "Sport Test",
+    "level": "normal",
+    "price": 120,
+    "examinerAmount": 200
+  },
+  {
+    "name": "ONET test",
+    "level": "easy",
+    "price": 50,
+    "examinerAmount": 10000
+  }
+]

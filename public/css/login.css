@@ -1,0 +1,45 @@
+#login-content {
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 10%;
+  padding-top: 15%;
+}
+
+#signup-content {
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 10%;
+  padding-top: 10%;
+}
+
+.signup-content {
+  background-color: rgba(105, 100, 100, 0.5);
+  height: 30rem;
+  padding: 2rem 0;
+}
+
+.content {
+  background-color: rgba(105, 100, 100, 0.5);
+  height: 20rem;
+  padding: 2rem 0;
+}
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url("../image/loggin-pic.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.form-control,
+.login-btn {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 20%;
+  margin-top: 2rem;
+}
+
+.authenticate {
+  text-shadow: 0.6px 0.4px 0.1px black;
+}

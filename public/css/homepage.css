@@ -1,0 +1,104 @@
+body {
+  font-family: "Itim", cursive;
+  font-size: 1.4rem;
+}
+:root {
+  --mainPurple: #440381;
+  --mainBlue: #08acc9;
+  --mainLight: #ffd6c0;
+  --mainPink: #ec368d;
+  --mainlowPink: #ffa5a5;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--mainLight);
+}
+
+.btn {
+  width: 20%;
+  padding: 1.2%;
+  margin-top: 1.2rem;
+}
+
+.secret {
+  text-align: center;
+  padding-top: 15%;
+}
+
+.navbar {
+  background: var(--mainBlue);
+  height: 3rem;
+  min-height: 60px;
+}
+
+.t {
+  color: var(--mainPurple);
+}
+
+.c {
+  color: var(--mainPink);
+}
+.navbar-brand {
+  color: var(--mainLight);
+}
+
+.text-pink {
+  color: var(--mainPink);
+}
+.text-purple {
+  color: var(--mainPurple);
+}
+.text-softLight {
+  color: var(--mainLight);
+}
+
+.origami-pig {
+  min-height: calc(100vh - 100px);
+  background: url(../image/pigOrigami.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.about-card {
+  height: 47rem;
+  width: 26rem;
+  background: var(--mainPurple);
+}
+.card-pic {
+  margin: 0 auto;
+}
+
+.beg {
+  width: 29rem;
+  height: 20rem;
+  border-radius: 4rem;
+}
+
+.underline {
+  background: var(--mainPurple);
+  width: 30rem;
+  height: 0.3rem;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 2rem;
+}
+
+.underline-center {
+  position: absolute;
+  height: 0.6rem;
+  margin: 0 auto;
+  border-radius: 2rem;
+  width: 50%;
+  background: var(--mainBlue);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.pig-gal {
+  background: var(--mainPurple);
+  color: var(--mainLight);
+  font-size: 1.1rem;
+}
