@@ -13,9 +13,9 @@ const createSendToken = (user, statusCode, req, res) => {
   const cookieOptions = {
     expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000),
     httpOnly: true,
-    secure: req.headers || req.headers["x-forwarded-proto"] == "https"
+    secure: req.secure || req.headers["x-forwarded-proto"] == "https"
   };
-  // if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
+  if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
 
   res.cookie("jwt", token, cookieOptions);
   // Remove password from output
@@ -73,8 +73,9 @@ exports.login = catchAsync(async (req, res, next) => {
 
 exports.logout = (req, res) => {
   res.cookie("jwt", "loggout", {
-    expires: new Date(Date.now() + 1000),
-    httpOnly: true
+    expires: new Date(Date.now() + 1),
+    httpOnly: true,
+    secure: req.secure || req.headers["x-forwarded-proto"] == "https"
   });
   res.status(200).json({ status: "success" });
 };
