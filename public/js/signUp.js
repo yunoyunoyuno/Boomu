@@ -21,7 +21,7 @@ const signup = async (name, email, password, passwordConfirm) => {
       alert("Invalid signup form");
     }
   } catch (err) {
-    alert("Wrong form");
+    alert(err.response.data.message);
     console.log(err.response.data.message);
   }
 };

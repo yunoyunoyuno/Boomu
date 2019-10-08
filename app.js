@@ -23,6 +23,7 @@ app.use(mongoSanitize());
 app.use(xss());
 dotenv.config({ path: "./config.env" });
 app.use(express.static("public"));
+app.enable("trust proxy");
 
 //Using middleWare function.
 //3)Routes
