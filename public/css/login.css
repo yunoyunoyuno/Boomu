@@ -1,3 +1,8 @@
+body {
+  font-family: "Itim", cursive;
+  font-size: 1.4rem;
+}
+
 #login-content {
   text-align: center;
   padding-left: 20%;

@@ -62,12 +62,14 @@ body {
   background-repeat: no-repeat;
 }
 .about-card {
-  height: 47rem;
-  width: 26rem;
   background: var(--mainPurple);
 }
 .card-pic {
   margin: 0 auto;
+}
+
+.h-100 {
+  min-height: 100vh !important;
 }
 
 .beg {
