@@ -7,12 +7,20 @@ const AppError = require("./utils/AppError");
 const userRouter = require("./routes/userRoute");
 const cookieParser = require("cookie-parser");
 const viewRouter = require("./routes/viewRoutes");
+const compression = require("compression");
+const mongoSanitize = require("express-mongo-sanitize");
+const xss = require("xss-clean");
 
 //Vital requirement
 const app = express();
 app.set("view engine", "ejs");
 app.use(express.json({ limit: "10kb" }));
+app.use(compression());
 app.use(cookieParser());
+//Prevent Query Injection
+app.use(mongoSanitize());
+//Prevent cross-site scripting attack
+app.use(xss());
 dotenv.config({ path: "./config.env" });
 app.use(express.static("public"));
 
@@ -46,7 +54,7 @@ const DB = process.env.DATABASE.replace("<password>", process.env.DATABASE_PASSW
 const DBLocal = process.env.DATABASE_LOCAL;
 
 mongoose
-  .connect(DBLocal, {
+  .connect(DB, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false

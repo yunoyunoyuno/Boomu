@@ -3,7 +3,7 @@ const signup = async (name, email, password, passwordConfirm) => {
   try {
     const res = await axios({
       method: "POST",
-      url: "http://127.0.0.1:3000/playground/users/signup",
+      url: "/playground/users/signup",
       data: {
         name: name,
         email: email,
