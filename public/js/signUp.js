@@ -11,18 +11,18 @@ const signup = async (name, email, password, passwordConfirm) => {
         passwordConfirm: passwordConfirm
       }
     });
-    console.log(res.data.status);
+
     if (res.data.status === "success") {
       alert("Complete ... Don't for get to loggin");
       window.setTimeout(() => {
         location.assign("/");
-      }, 1000);
+      }, 300);
     } else {
       alert("Invalid signup form");
     }
   } catch (err) {
     alert(err.response.data.message);
-    console.log(err.response.data.message);
+    console.log(err.response.data);
   }
 };
 
