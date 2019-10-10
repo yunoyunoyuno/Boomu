@@ -13,7 +13,7 @@ const login = async (email, password) => {
       alert("Login successfully");
       window.setTimeout(() => {
         location.assign("/");
-      }, 1200);
+      }, 300);
     } else {
       alert("Wrong email or Password");
     }

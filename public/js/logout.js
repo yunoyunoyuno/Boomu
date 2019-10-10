@@ -9,7 +9,7 @@ const logout = async () => {
       alert("Logout successfully");
       window.setTimeout(() => {
         location.assign("/");
-      }, 900);
+      }, 300);
     }
   } catch (err) {
     console.log(err);
