@@ -51,7 +51,6 @@ body {
 .origami-pig {
   min-height: calc(100vh - 100px);
   background: url(../image/pigOrigami.jpeg);
-  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
